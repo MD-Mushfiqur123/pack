@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1778856298897,
+  "lastUpdate": 1779745785378,
   "repoUrl": "https://github.com/buildpacks/pack",
   "entries": {
     "Go Benchmark": [
@@ -14470,6 +14470,48 @@ window.BENCHMARK_DATA = {
           {
             "name": "BenchmarkBuild/with_Additional_Buildpack",
             "value": 90177698541,
+            "unit": "ns/op",
+            "extra": "1 times\n4 procs"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "rsoerensen@salesforce.com",
+            "name": "Rune Soerensen",
+            "username": "runesoerensen"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "a7f39ca33f3c2d65211843d04c48f114db1f080a",
+          "message": "Suggest `heroku/builder:26` instead of `heroku/builder:24` (#2611)\n\nFollowing the GA release of the Heroku-26 stack, switch the suggested\nHeroku builder from `heroku/builder:24` to `heroku/builder:26`. The\n:24 builder remains trusted but is no longer suggested.\n\nAlso re-sync the :26 description with what's in our `builder.toml`\nconfig.\n\nSee:\nhttps://devcenter.heroku.com/changelog-items/3703\nhttps://github.com/heroku/cnb-builder-images/blob/main/builder-26/builder.toml\n\nSigned-off-by: Rune Soerensen <rsoerensen@salesforce.com>",
+          "timestamp": "2026-05-25T16:46:57-05:00",
+          "tree_id": "6ff1a7ca4f9ec53cc5aa90f3d96ad4612d4b43d8",
+          "url": "https://github.com/buildpacks/pack/commit/a7f39ca33f3c2d65211843d04c48f114db1f080a"
+        },
+        "date": 1779745783514,
+        "tool": "go",
+        "benches": [
+          {
+            "name": "BenchmarkBuild/with_Untrusted_Builder",
+            "value": 5193377842,
+            "unit": "ns/op",
+            "extra": "1 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkBuild/with_Trusted_Builder",
+            "value": 1573502760,
+            "unit": "ns/op",
+            "extra": "1 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkBuild/with_Additional_Buildpack",
+            "value": 121913874848,
             "unit": "ns/op",
             "extra": "1 times\n4 procs"
           }
